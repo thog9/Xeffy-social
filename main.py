@@ -55,6 +55,10 @@ async def run_connect(language: str):
     from scripts.connect import run_connect
     await run_connect(language)
 
+async def run_airdrop(language: str):
+    from scripts.airdrop import run_airdrop
+    await run_airdrop(language)
+
 async def cmd_exit(language: str):
     messages = {"vi": "Đang thoát...", "en": "Exiting..."}
     print_border(messages[language], Fore.GREEN)
@@ -64,6 +68,7 @@ SCRIPT_MAP = {
     "social": run_social,
     "checkin": run_checkin,
     "connect": run_connect,
+    "airdrop": run_airdrop,
     "exit": cmd_exit
 }
 
@@ -73,6 +78,7 @@ def get_available_scripts(language):
             {"name": "1. Điểm danh hàng ngày", "value": "checkin"},
             {"name": "2. Tự động làm nhiệm vụ", "value": "social"},
             {"name": "3. Kết nối Twitter (X OAuth)", "value": "connect"},
+            {"name": "4. Airdrop Xeffy", "value": "airdrop"},
           
             {"name": "X. Thoát", "value": "exit"},
         ],
@@ -80,6 +86,7 @@ def get_available_scripts(language):
             {"name": "1. Daily Check-In", "value": "checkin"},
             {"name": "2. Auto complete tasks", "value": "social"},
             {"name": "3. Connect Twitter (X OAuth)", "value": "connect"},
+            {"name": "4. Airdrop Xeffy", "value": "airdrop"},
           
             {"name": "X. Exit", "value": "exit"},
         ]
