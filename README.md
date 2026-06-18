@@ -49,6 +49,15 @@ This collection of Python scripts automates task completion on the Xeffy platfor
 - ✅ Sequential account processing for OAuth flow
 - ✅ Proxy support
 
+✨ **Airdrop Bot** (`airdrop.py`)
+
+- ✅ Automatic check Xeffy Airdrop registration status
+- ✅ X (Twitter) follow verification
+- ✅ Vault open & registration completion
+- ✅ Display wallet, Discord, X handle info
+- ✅ Support update/edit registration
+- ✅ Proxy & multi-threading support
+
 ---
 
 ## 🛠️ Prerequisites
@@ -115,7 +124,8 @@ Xeffy-social/
 └── scripts/                # Individual scripts
     ├── social.py           # Task automation bot
     ├── checkin.py          # Daily check-in
-    └── connect.py          # Twitter OAuth connection
+    ├── connect.py          # Twitter OAuth connection
+    └── airdrop.py          # Xeffy Airdrop registration bot
 
 ```
 
